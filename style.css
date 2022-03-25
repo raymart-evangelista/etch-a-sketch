@@ -1,0 +1,8 @@
+#gridContainer {
+    display: flex;
+}
+
+.grid {
+    padding: 30px;
+    border-radius: 30%;
+}
