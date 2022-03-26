@@ -49,10 +49,19 @@ for (i = 0; i < amtSquares; i++) {
 // document.getElementsByClassName('square').style.flexBasis = `${percentageOfContainerWidth}%`;
 
 let squares = document.querySelectorAll('.square');
-alert(squares.length);
 
 squares.forEach((square) => {
     square.addEventListener('mouseover', function (e) {
         e.target.style.background = 'blue';
+
+        // erase color after certain amount of time
+        setTimeout(function() {
+            e.target.style.background = '';
+          }, 500);
+
     });
+
 });
+
+
+
