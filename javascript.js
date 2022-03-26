@@ -1,11 +1,18 @@
 document.body.style.backgroundColor = 'brown';
 
+// reference the options container
+const optContainer = document.querySelector('#optContainer');
 // reference the grid container from the html file
 const gridContainer = document.querySelector('#gridContainer');
 
 
+
+const eraseGridButton = document.createElement('button');
+eraseGridButton.textContent = 'Erase All';
+optContainer.appendChild(eraseGridButton);
+
 // determine number of squares which will also determine the number of rows
-const numToSquare = 16;
+const numToSquare = 5;
 const amtSquares = numToSquare ** 2;
 const amtRows = Math.sqrt(amtSquares);
 
@@ -56,12 +63,13 @@ squares.forEach((square) => {
 
         // erase color after certain amount of time
         setTimeout(function() {
-            e.target.style.background = '';
+            // e.target.style.background = '';
           }, 500);
 
     });
 
-});
+    square.style.flexBasis='20%';
 
+});
 
 
