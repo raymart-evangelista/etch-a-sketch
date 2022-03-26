@@ -1,8 +1,21 @@
 #gridContainer {
+    background-color: rgb(148, 225, 255);
+    width: 500px;
+    height: 500px;
+
     display: flex;
+    flex-wrap: wrap;
+    --n:3;
+
+
 }
 
-.grid {
-    padding: 30px;
-    border-radius: 30%;
+.square {
+    background-color: white;
+    /* display: flex;*/
+    flex: 1;
+    border: 1px solid black;
+    flex-basis: 5.59%;
+
+
 }
