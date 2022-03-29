@@ -13,6 +13,13 @@ const eraseGridButton = document.createElement('button');
 eraseGridButton.textContent = 'Erase All';
 optContainer.appendChild(eraseGridButton);
 
+// When the Erase All button is clicked, the grid becomes blank
+eraseGridButton.addEventListener('click', function() {
+    removeGrid();
+    createSquareDivs(numToSquare);
+    createGrid(numToSquare);
+});
+
 
 ///////////////////////////////
 // Creating Grid Size Slider //
@@ -20,13 +27,6 @@ optContainer.appendChild(eraseGridButton);
 const gridSizeSlider = document.getElementById('gridRange');
 const sliderValue = document.getElementById('sliderValue');
 sliderValue.textContent = gridSizeSlider.value;
-
-// initialize starting values and create starting grid
-let numToSquare = 16;
-let amtSquares = numToSquare ** 2;
-createSquareDivs(numToSquare);
-createGrid(numToSquare);
-
 
 // When value on slider changes, update web page text and grid
 gridSizeSlider.oninput = function() {
@@ -88,3 +88,9 @@ function createGrid(numToSquare) {
     
     });
 }
+
+// initialize starting values and create starting grid
+let numToSquare = 16;
+let amtSquares = numToSquare ** 2;
+createSquareDivs(numToSquare);
+createGrid(numToSquare);
