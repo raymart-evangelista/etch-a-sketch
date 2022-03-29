@@ -1,5 +1,3 @@
-document.body.style.backgroundColor = 'brown';
-
 // reference the options container
 const optContainer = document.querySelector('#optContainer');
 // reference the grid container from the html file
@@ -26,11 +24,11 @@ eraseGridButton.addEventListener('click', function() {
 ///////////////////////////////
 const gridSizeSlider = document.getElementById('gridRange');
 const sliderValue = document.getElementById('sliderValue');
-sliderValue.textContent = gridSizeSlider.value;
+sliderValue.textContent = `${gridSizeSlider.value} * ${gridSizeSlider.value}`;
 
 // When value on slider changes, update web page text and grid
 gridSizeSlider.oninput = function() {
-    sliderValue.textContent = this.value;
+    sliderValue.textContent = `${this.value} * ${this.value}`;
     //numToSquare = this.value;
     if(numToSquare !== this.value) {
         numToSquare = this.value;
